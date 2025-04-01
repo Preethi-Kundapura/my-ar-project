@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-based AR 3D Animation</title>
+
+    <!-- Include A-Frame (for VR/AR) -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+    <!-- Include AR.js for AR functionality -->
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+
+</head>
+<body style="margin: 0; overflow: hidden;">
+    <!-- AR Scene -->
+    <a-scene embedded arjs>
+        <!-- Marker that the AR experience will recognize (hiro marker) -->
+        <a-marker preset="Hiro">
+            <!-- A 3D object (e.g., a rotating red cube) -->
+            <a-box position="0 0.5 0" color="red"
+                animation="property: rotation; to: 0 360 0; dur: 5000; loop: true">
+            </a-box>
+        </a-marker>
+
+        <!-- Camera -->
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
