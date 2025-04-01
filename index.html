@@ -11,18 +11,21 @@
     <!-- Include AR.js for AR functionality -->
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
 
+    <!-- Include Three.js (for 3D rendering) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Include GLTFLoader for 3D model loading -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/loaders/GLTFLoader.js"></script>
 </head>
 <body style="margin: 0; overflow: hidden;">
     <!-- AR Scene -->
     <a-scene embedded arjs>
         <!-- Marker that the AR experience will recognize (hiro marker) -->
-        <a-marker preset="Hiro">
-            <!-- A 3D object (e.g., a rotating red cube) -->
-            <a-box position="0 0.5 0" color="red"
-                animation="property: rotation; to: 0 360 0; dur: 5000; loop: true">
-            </a-box>
+        <a-marker preset="hiro">
+            <!-- A 3D object (e.g., a rotating box) -->
+            <a-box position="0 0.5 0" material="color: red;" animation="property: rotation; to: 0 360 0; dur: 5000; loop: true"></a-box>
         </a-marker>
-
+        
         <!-- Camera -->
         <a-entity camera></a-entity>
     </a-scene>
