@@ -1,7 +1,4 @@
-rm vercel.json  # Remove the existing file
-
-# Recreate vercel.json
-echo '{
+{
   "headers": [
     {
       "source": "/(.*)",
@@ -13,5 +10,4 @@ echo '{
       ]
     }
   ]
-}' > vercel.json
-
+}
